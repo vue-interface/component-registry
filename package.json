@@ -32,19 +32,25 @@
   },
   "homepage": "https://github.com/vue-interface/component-registry/docs#readme",
   "devDependencies": {
+    "@babel/preset-env": "^7.10.3",
     "@vue/cli-plugin-babel": "^4.0",
     "@vue/cli-plugin-eslint": "^4.0",
     "@vue/cli-plugin-unit-jest": "^4.4.1",
     "@vue/cli-service": "^4.0",
     "@vuepress/plugin-register-components": "^1.5.2",
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
     "cross-env": "^7.0.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "jest": "^26.1.0",
     "markdown-it-meta": "0.0.1",
     "vue-template-compiler": "^2.6.11",
     "vuepress": "^1.5.2",
     "vuepress-plugin-template-constants": "^0.2.1",
     "webpack-manifest-plugin": "^2.2.0"
+  },
+  "dependencies": {
+    "@vue-interface/utils": "^0.9.7"
   }
 }

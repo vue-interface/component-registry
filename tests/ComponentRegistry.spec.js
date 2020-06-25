@@ -1,4 +1,5 @@
-const { default: ComponentRegistry } = require("..");
+import ComponentRegistry from '..';
+import { camelCase } from '@vue-interface/utils';
 
 describe('ComponentRegistry.js', () => {
     it('works!', () => {
