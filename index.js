@@ -6,12 +6,12 @@ export default class ComponentRegistry {
     }
 
     validate(value) {
-        if(typeof value === 'object') {
+        if(typeof value === 'object' || typeof value === 'function') {
             return value;
         }
 
         throw new Error(
-            `Invalid data type \`${typeof value}\`. Should be type \`object\`.`
+            `Invalid data type \`${typeof value}\`. Should be type \`object\` or \`function\`.`
         );
     }
 
