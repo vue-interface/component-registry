@@ -1,9 +1,11 @@
 module.exports = {
     presets: [
-        ["@babel/preset-env", {
-            "targets": {
-                "node": true
+        ['@vue/app', {
+            targets: {
+                node: "current",
+                browsers: "> 0.25%, not dead"
             }
         }]
-    ]
+    ],
+    exclude: /node_modules\/(?!@vue-interface\/.*)/
 };
