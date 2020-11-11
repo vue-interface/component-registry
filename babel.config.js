@@ -3,9 +3,10 @@ module.exports = {
         ['@vue/app', {
             targets: {
                 node: "current",
-                browsers: "> 0.25%, not dead"
+                "ie": "10",
+                browsers: "> 0.25%, not dead",
             }
         }]
-    ],
-    exclude: /node_modules\/(?!@vue-interface\/.*)/
+    ]
 };
+  
