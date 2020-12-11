@@ -1,6 +1,6 @@
 {
   "name": "@vue-interface/component-registry",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "An abstract component registry used to keep bundle sizes small and extendible.",
   "main": "./index.js",
   "unpkg": "./dist/ComponentRegistry.umd.min.js",
