@@ -3,7 +3,6 @@
   "version": "0.2.1",
   "description": "An abstract component registry used to keep bundle sizes small and extendible.",
   "main": "./index.js",
-  "browser": "./dist/ComponentRegistry.umd.min.js",
   "unpkg": "./dist/ComponentRegistry.umd.min.js",
   "scripts": {
     "watch": "npm run serve",
