@@ -2,7 +2,9 @@
   "name": "@vue-interface/component-registry",
   "version": "0.1.5",
   "description": "An abstract component registry used to keep bundle sizes small and extendible.",
-  "main": "./dist/ComponentRegistry.umd.js",
+  "main": "./index.js",
+  "browser": "./dist/ComponentRegistry.umd.min.js",
+  "unpkg": "./dist/ComponentRegistry.umd.min.js",
   "scripts": {
     "watch": "npm run serve",
     "serve": "vue-cli-service build --target lib --name=ComponentRegistry ./index.js --watch",
