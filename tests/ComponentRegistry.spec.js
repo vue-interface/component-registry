@@ -1,28 +1,25 @@
-import ComponentRegistry from '..';
-import { camelCase } from '@vue-interface/utils';
+import { ComponentRegistry } from '../index';
 
 describe('ComponentRegistry.js', () => {
     it('works!', () => {
         const registry = new ComponentRegistry({
-            a: {}
+            SomeKey: {}
         });
 
-        expect(registry.get('a')).toBeInstanceOf(Object);
+        expect(registry.get('some-key')).toBeInstanceOf(Object);
 
-        expect(() => registry.register('a', true)).toThrowError();
+        expect(() => registry.register('SomeKey', true)).toThrowError();
 
-        expect(() => registry.get('b')).toThrowError();
+        expect(() => registry.get('another-key')).toThrowError();
 
-        registry.register({b: {}});
+        registry.register('AnotherKey', {});
 
-        expect(registry.get('b')).toBeInstanceOf(Object);
+        expect(registry.get('another-key')).toBeInstanceOf(Object);
         
-        registry.remove('b');
+        registry.remove('another-key');
 
-        expect(() => registry.get('b')).toThrowError();
+        expect(() => registry.get('another-key')).toThrowError();
 
         registry.reset();
-
-        expect(() => registry.get('a')).toThrowError();
     });
 });

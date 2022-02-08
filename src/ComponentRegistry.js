@@ -1,8 +1,13 @@
+import { paramCase } from "param-case";
 
 export default class ComponentRegistry {
 
     constructor(components = {}) {
-        this.components = components;
+        this.components = {};
+        
+        Object.entries(components).forEach(([key, value]) => {
+            this.register(key, value);    
+        });
     }
 
     validate(value) {
@@ -16,8 +21,12 @@ export default class ComponentRegistry {
     }
 
     get(name) {
-        if(this.components[name]) {
-            return this.components[name];
+        const match = this.components[
+            name = paramCase(name)
+        ];
+        
+        if(match) {
+            return match;
         }
 
         throw new Error(`"${name}" has not been registered yet!`);
@@ -26,25 +35,27 @@ export default class ComponentRegistry {
     register(name, value) {
         if(typeof name === 'object') {
             Object.entries(name).forEach(([name, module]) => {
-                this.register(name, module);
+                this.register(paramCase(name), module);
             });
 
             return this;
         }
 
-        this.components[name] = this.validate(value);
+        this.components[paramCase(name)] = this.validate(value);
 
         return this;
     }
 
     remove(name) {
-        delete this.components[name];
+        delete this.components[paramCase(name)];
 
         return this;
     }
 
     reset() {
         this.components = {};
+
+        return this;
     }
 
 }
