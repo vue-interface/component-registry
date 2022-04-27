@@ -10,15 +10,15 @@ export default class ComponentRegistry {
         });
     }
 
-    validate(value) {
-        if(typeof value === 'object' || typeof value === 'function') {
-            return value;
-        }
+    // validate(value) {
+    //     if(typeof value === 'object' || typeof value === 'function') {
+    //         return value;
+    //     }
 
-        throw new Error(
-            `Invalid data type \`${typeof value}\`. Should be type \`object\` or \`function\`.`
-        );
-    }
+    //     throw new Error(
+    //         `Invalid data type \`${typeof value}\`. Should be type \`object\` or \`function\`.`
+    //     );
+    // }
 
     get(name) {
         const match = this.components[
@@ -41,7 +41,7 @@ export default class ComponentRegistry {
             return this;
         }
 
-        this.components[paramCase(name)] = this.validate(value);
+        this.components[paramCase(name)] = value;
 
         return this;
     }

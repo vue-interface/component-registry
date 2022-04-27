@@ -196,14 +196,6 @@ var ComponentRegistry = /* @__PURE__ */ function() {
     });
   }
   _createClass(ComponentRegistry2, [{
-    key: "validate",
-    value: function validate(value) {
-      if (_typeof(value) === "object" || typeof value === "function") {
-        return value;
-      }
-      throw new Error("Invalid data type `".concat(_typeof(value), "`. Should be type `object` or `function`."));
-    }
-  }, {
     key: "get",
     value: function get(name) {
       var match = this.components[name = paramCase(name)];
@@ -223,7 +215,7 @@ var ComponentRegistry = /* @__PURE__ */ function() {
         });
         return this;
       }
-      this.components[paramCase(name)] = this.validate(value);
+      this.components[paramCase(name)] = value;
       return this;
     }
   }, {

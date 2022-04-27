@@ -8,7 +8,7 @@ describe('ComponentRegistry.js', () => {
 
         expect(registry.get('some-key')).toBeInstanceOf(Object);
 
-        expect(() => registry.register('SomeKey', true)).toThrowError();
+        // expect(() => registry.register('SomeKey', true)).toThrowError();
 
         expect(() => registry.get('another-key')).toThrowError();
 
