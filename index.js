@@ -1,6 +1,9 @@
-import { ComponentRegistry, factory } from './src';
+import ComponentRegistry from './src/ComponentRegistry';
+
+export function factory(...args) {
+    return new ComponentRegistry(...args);
+}
 
 export {
-    ComponentRegistry,
-    factory
+    ComponentRegistry
 };
