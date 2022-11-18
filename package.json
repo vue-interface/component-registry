@@ -9,8 +9,9 @@
   "module": "./dist/component-registry.es.js",
   "exports": {
     ".": {
+      "import": "./dist/component-registry.es.js",
       "require": "./dist/component-registry.umd.js",
-      "import": "./dist/component-registry.es.js"
+      "types": "./dist/index.d.ts"
     }
   },
   "browserslist": "last 2 versions, > 0.5%, ie >= 11",
@@ -42,24 +43,24 @@
   },
   "homepage": "https://github.com/vue-interface/component-registry/docs#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-env": "^7.20.2",
     "@babel/preset-typescript": "^7.18.6",
     "@rollup/plugin-babel": "^5.3.0",
+    "@vitejs/plugin-vue": "^3.0.1",
     "autoprefixer": "^10.4.2",
     "babel-eslint": "^10.1.0",
     "babel-preset-vue": "^2.0.2",
     "change-case": "^4.1.2",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
-    "jest": "^28.1.3",
     "pascalcase": "^2.0.0",
     "postcss": "^8.4.6",
     "tailwindcss": "^3.0.18",
-    "vite": "^2.7.2",
-    "vite-plugin-vue2": "^1.9.3"
+    "vite": "^3.0.0",
+    "vite-plugin-dts": "^1.7.1",
+    "vue": "^3.2.37"
   },
   "dependencies": {
-    "lodash.kebabcase": "^4.1.1",
     "param-case": "^3.0.4"
   }
 }

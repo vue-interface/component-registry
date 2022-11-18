@@ -1,5 +1,8 @@
 import { paramCase } from "param-case";
 export default class ComponentRegistry {
+    /**
+     * Create a new ComponentRegistry instance.
+     */
     constructor(components = {}) {
         this.components = new Map;
         Object.entries(components).forEach(([key, value]) => {
@@ -8,9 +11,6 @@ export default class ComponentRegistry {
     }
     /**
      * Get a component by the given key.
-     *
-     * @param {string} key
-     * @returns {any}
      */
     get(key) {
         const match = this.components.get(key = paramCase(key));
@@ -21,10 +21,6 @@ export default class ComponentRegistry {
     }
     /**
      * Register a component with the given key.
-     *
-     * @param {string|object} key
-     * @param {any} value
-     * @returns {this}
      */
     register(key, value) {
         if (typeof key === 'object') {
@@ -38,9 +34,6 @@ export default class ComponentRegistry {
     }
     /**
      * Remove a component with the given key.
-     *
-     * @param {string|object} key
-     * @returns {this}
      */
     remove(key) {
         this.components.delete(paramCase(key));
@@ -48,8 +41,6 @@ export default class ComponentRegistry {
     }
     /**
      * Reset the registry.
-     *
-     * @returns {this}
      */
     reset() {
         this.components = new Map;
