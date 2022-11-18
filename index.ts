@@ -1,9 +1,10 @@
 import ComponentRegistry from './src/ComponentRegistry';
 
-export function factory(components: {[key: string]: any} = {}) {
+function factory(components: {[key: string]: any} = {}): ComponentRegistry {
     return new ComponentRegistry(components);
 }
 
 export {
+    factory,
     ComponentRegistry
 };

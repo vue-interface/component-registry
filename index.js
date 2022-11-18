@@ -1,5 +1,5 @@
 import ComponentRegistry from './src/ComponentRegistry';
-export function factory(components = {}) {
+function factory(components = {}) {
     return new ComponentRegistry(components);
 }
-export { ComponentRegistry };
+export { factory, ComponentRegistry };
