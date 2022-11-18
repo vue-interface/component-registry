@@ -68,3 +68,4 @@ export {
   j as ComponentRegistry,
   C as factory
 };
+//# sourceMappingURL=component-registry.js.map
